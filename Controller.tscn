@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Controller.gd" type="Script" id=1]
+
+[sub_resource type="CubeMesh" id=1]
+
+[node name="Controller" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 0.870726, 0, 0, 0, 0.259095, 0, 0, 0, 1, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = null
