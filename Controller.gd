@@ -1,9 +1,9 @@
-extends Spatial
+extends Node3D
 
 # il controllore che implementa il controllo in retroazione
 
-onready var palla = get_node("/root/Palla")
-onready var base = get_node("/root/Base")
+@onready var palla = get_node("/root/Palla")
+@onready var base = get_node("/root/Base")
 
 const coeff = 0.3
 

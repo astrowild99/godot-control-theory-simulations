@@ -1,26 +1,21 @@
-[gd_scene format=2]
+[gd_scene format=3 uid="uid://b17dtr7avrtvk"]
 
 [node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="UI" type="GridContainer" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+layout_mode = 0
+offset_right = 308.0
+offset_bottom = 302.0
 
 [node name="Spiegazioni" type="VBoxContainer" parent="UI"]
-margin_right = 295.0
-margin_bottom = 315.0
+layout_mode = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="UI/Spiegazioni"]
-margin_right = 295.0
-margin_bottom = 315.0
+layout_mode = 2
 text = "Simulazione controlli automatici:
 Quando in controllo manuale, si comanda l'angolo della base entro un range di angoli, quando si abilita il controllo automatico l'input definisce invece la posizione che si vuole far raggiungere alla pallina.
 ----->O->Gc->Gpp->Gpb------->
@@ -38,40 +33,21 @@ Gpp(s) = -----------------------
 Gpb(s) = -------------------------
                    (s^2 + 0.2 s)
 											"
-fit_content_height = true
+fit_content = true
 
 [node name="Controlli" type="GridContainer" parent="UI"]
-margin_top = 319.0
-margin_right = 295.0
-margin_bottom = 403.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+layout_mode = 2
 
 [node name="AbilitaControllo" type="CheckButton" parent="UI/Controlli"]
-margin_right = 295.0
-margin_bottom = 40.0
+layout_mode = 2
 text = "Abilitare Controllo Automatico"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="AbilitaPoloZero" type="CheckButton" parent="UI/Controlli"]
-margin_top = 44.0
-margin_right = 295.0
-margin_bottom = 84.0
+layout_mode = 2
 text = "Controllo Cancellazione Polo Zero"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Graph" type="GridContainer" parent="UI"]
-margin_top = 407.0
-margin_right = 295.0
-margin_bottom = 407.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+layout_mode = 2
 
 [node name="Line2D" type="Line2D" parent="UI/Graph"]
 width = 2.0

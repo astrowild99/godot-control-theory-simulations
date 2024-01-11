@@ -1,10 +1,10 @@
-extends Spatial
+extends Node3D
 
-onready var palla = get_node("Palla")
-onready var base = get_node("Base")
-onready var abilita_controllo = get_node("GUI/UI/Controlli/AbilitaControllo")
-onready var abilita_polo_zero = get_node("GUI/UI/Controlli/AbilitaPoloZero")
-onready var graph = get_node("GUI/UI/Graph/Line2D")
+@onready var palla = get_node("Palla")
+@onready var base = get_node("Base")
+@onready var abilita_controllo = get_node("GUI/UI/Controlli/AbilitaControllo")
+@onready var abilita_polo_zero = get_node("GUI/UI/Controlli/AbilitaPoloZero")
+@onready var graph = get_node("GUI/UI/Graph/Line2D")
 
 const gain = 0.07
 const grade = 2
@@ -44,7 +44,7 @@ func _physics_process(delta):
 	var u = 0
 	
 	if abilita_controllo.pressed:
-		input = palla.translation.x
+		input = palla.position.x
 	if Input.is_action_pressed("ui_right"):
 		input -= 13
 	if Input.is_action_pressed("ui_left"):
@@ -57,5 +57,5 @@ func _physics_process(delta):
 	
 	base.set_input(u)
 	if k == 0:
-		print_graph(palla.translation.x, delta)
+		print_graph(palla.position.x, delta)
 	pass

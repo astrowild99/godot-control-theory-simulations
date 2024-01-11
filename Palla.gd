@@ -1,4 +1,4 @@
-extends RigidBody
+extends RigidBody3D
 
 var old_x = 0
 var this
